@@ -1,0 +1,81 @@
+Initialize engine version: 5.3.5f1 (960ebf59018a)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 870M (ID=0x1199)
+    Vendor:   NVIDIA
+    VRAM:     3039 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Alex Xu\Desktop\Other Folders\Unity Project\QuizGame\Builds\Windows\QuizGame (x86)_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Alex Xu\Desktop\Other Folders\Unity Project\QuizGame\Builds\Windows\QuizGame (x86)_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Alex Xu\Desktop\Other Folders\Unity Project\QuizGame\Builds\Windows\QuizGame (x86)_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Alex Xu\Desktop\Other Folders\Unity Project\QuizGame\Builds\Windows\QuizGame (x86)_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Alex Xu\Desktop\Other Folders\Unity Project\QuizGame\Builds\Windows\QuizGame (x86)_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Alex Xu\Desktop\Other Folders\Unity Project\QuizGame\Builds\Windows\QuizGame (x86)_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Alex Xu\Desktop\Other Folders\Unity Project\QuizGame\Builds\Windows\QuizGame (x86)_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Alex Xu\Desktop\Other Folders\Unity Project\QuizGame\Builds\Windows\QuizGame (x86)_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+- Completed reload, in  0.168 seconds
+Platform assembly: C:\Users\Alex Xu\Desktop\Other Folders\Unity Project\QuizGame\Builds\Windows\QuizGame (x86)_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Alex Xu\Desktop\Other Folders\Unity Project\QuizGame\Builds\Windows\QuizGame (x86)_Data\Managed\System.dll (this message is harmless)
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initialized touch support.
+UnloadTime: 0.538415 ms
+CORRECT!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.050021 ms
+
+Unloading 2 unused Assets to reduce memory usage. Loaded Objects now: 355.
+Total: 0.252315 ms (FindLiveObjects: 0.022237 ms CreateObjectMapping: 0.014967 ms MarkObjects: 0.211260 ms  DeleteObjects: 0.003421 ms)
+
+WRONG!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.472556 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 355.
+Total: 0.236919 ms (FindLiveObjects: 0.016678 ms CreateObjectMapping: 0.013684 ms MarkObjects: 0.203562 ms  DeleteObjects: 0.002993 ms)
+
+CORRECT!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.429791 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 355.
+Total: 0.244617 ms (FindLiveObjects: 0.019244 ms CreateObjectMapping: 0.013684 ms MarkObjects: 0.208267 ms  DeleteObjects: 0.003421 ms)
+
+CORRECT!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.446469 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 355.
+Total: 0.232643 ms (FindLiveObjects: 0.015395 ms CreateObjectMapping: 0.013257 ms MarkObjects: 0.200569 ms  DeleteObjects: 0.002993 ms)
+
+WRONG!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.458871 ms
+
+Unloading 1 unused Assets to reduce memory usage. Loaded Objects now: 353.
+Total: 0.243334 ms (FindLiveObjects: 0.018389 ms CreateObjectMapping: 0.012829 ms MarkObjects: 0.208694 ms  DeleteObjects: 0.003421 ms)
+
+WRONG!
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebugBindings.gen.cpp Line: 37)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 194b0 -> priority: 1 
+  Thread -> id: 12a88 -> priority: 1 
