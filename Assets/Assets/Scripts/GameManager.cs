@@ -8,7 +8,8 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
 	public Question[] questions;
-	private static List<Question> unansweredQuestions;
+	private List<Question> unansweredQuestions;
+	public static GameManager instance;
 
 	private Question currentQuestion;
 
@@ -21,7 +22,37 @@ public class GameManager : MonoBehaviour {
 
 	[SerializeField] private Animator animator;
 
+	[SerializeField] private Button trueButton;
+	[SerializeField] private Button falseButton;
+
+	[SerializeField] private Canvas quizCanvas;
+	[SerializeField] private Canvas endCanvas;
+	[SerializeField] private Canvas startCanvas;
+
+	private int score;
+
+	void Awake() {
+		if (instance != null) {
+			Debug.LogError ("More than one GameManager in scene.");
+		} else {
+			instance = this;
+		}
+	}
+
 	void Start() {
+		score = 0;
+		quizCanvas.gameObject.SetActive(false);
+		endCanvas.gameObject.SetActive(false);
+		startCanvas.gameObject.SetActive(true);
+	}
+
+	public void StartQuiz() {
+		startCanvas.gameObject.SetActive(false);
+		quizCanvas.gameObject.SetActive(true);
+		Setup();
+	}
+
+	private void Setup() {
 		if (unansweredQuestions == null || unansweredQuestions.Count == 0) {
 			unansweredQuestions = questions.ToList<Question>();
 		}
@@ -49,29 +80,57 @@ public class GameManager : MonoBehaviour {
 
 		yield return new WaitForSeconds(timeBetweenQuestions);
 
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+		animator.SetTrigger("None");
+
+		yield return new WaitForSeconds(timeBetweenQuestions/5f);
+
+		if (unansweredQuestions == null || unansweredQuestions.Count == 0) {
+			EndOfQuiz();
+			return true;
+		}
+
+		Setup();
+		EnableButtons();
+		
+		//SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+	}
+
+	private void DisableButtons() {
+		trueButton.GetComponent<CanvasGroup>().interactable = false;
+		falseButton.GetComponent<CanvasGroup>().interactable = false;
+	}
+
+	private void EnableButtons() {
+		trueButton.GetComponent<CanvasGroup>().interactable = true;
+		falseButton.GetComponent<CanvasGroup>().interactable = true;
 	}	
 
 	public void UserSelectTrue() {
 		animator.SetTrigger("True");
+		DisableButtons();
 		if (currentQuestion.isTrue) {
-			Debug.Log("CORRECT!");
-		} else {
-			Debug.Log("WRONG!");
+			score++;
 		}
-
 		StartCoroutine(TransitionToNextQuestion());
 	}
 
 	public void UserSelectFalse() {
 		animator.SetTrigger("False");
+		DisableButtons();
 		if (!currentQuestion.isTrue) {
-			Debug.Log("CORRECT!");
-		} else {
-			Debug.Log("WRONG!");
-		}
-
+			score++;
+		} 
 		StartCoroutine(TransitionToNextQuestion());
+	}
+
+	public int GetScore() {
+		return score;
+	}
+
+	private void EndOfQuiz() {
+		quizCanvas.gameObject.SetActive(false);
+		endCanvas.gameObject.SetActive(true);
+		EndGame.instance.ShowScore(score, questions.Length);
 	}
 
 }
