@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2008
+
+Project("{25AB8DDF-2C91-FADF-50CB-E59D996F2719}") = "Unity-2D-QuizGame-Project", "Assembly-CSharp.csproj", "{9C570A2D-B7F4-8075-CFCF-52EF5815BC44}"
+EndProject
+Project("{25AB8DDF-2C91-FADF-50CB-E59D996F2719}") = "Unity-2D-QuizGame-Project", "Assembly-CSharp-Editor.csproj", "{5443A2C2-FDCD-A324-5EFC-38D18CF9AD2B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9C570A2D-B7F4-8075-CFCF-52EF5815BC44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9C570A2D-B7F4-8075-CFCF-52EF5815BC44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9C570A2D-B7F4-8075-CFCF-52EF5815BC44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9C570A2D-B7F4-8075-CFCF-52EF5815BC44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5443A2C2-FDCD-A324-5EFC-38D18CF9AD2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5443A2C2-FDCD-A324-5EFC-38D18CF9AD2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5443A2C2-FDCD-A324-5EFC-38D18CF9AD2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5443A2C2-FDCD-A324-5EFC-38D18CF9AD2B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = Assembly-CSharp.csproj
+	EndGlobalSection
+EndGlobal

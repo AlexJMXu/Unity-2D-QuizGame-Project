@@ -19,16 +19,16 @@ public class EndGame : MonoBehaviour {
 	
 	public void ShowScore(int _score, int _numberOfQuestions) {
 		scoreText.text = "<b>" + _score + "/" + _numberOfQuestions + "</b>";
-		if (_score < _numberOfQuestions * 0.2) {
-			scoreText.text = scoreText.text  + '\n' + "You are pretty bad at this.";
-		} else if (_score < _numberOfQuestions * 0.4) {
-			scoreText.text = scoreText.text  + '\n' + "Not bad, you know some stuff.";
-		} else if (_score < _numberOfQuestions * 0.6) {
-			scoreText.text = scoreText.text  + '\n' + "Pretty good, you know quite a bit!";
-		} else if (_score < _numberOfQuestions * 0.8) {
-			scoreText.text = scoreText.text  + '\n' + "Wow! You know so much!";
-		} else if (_score == _numberOfQuestions) {
-			scoreText.text = scoreText.text  + '\n' + "Please message Jamie to claim your reward of  KFC hotwings.";
+		if (_score < 14) {
+			scoreText.text = scoreText.text  + '\n' + "Our friendship is over.";
+		} else if (_score < 16) {
+			scoreText.text = scoreText.text  + '\n' + "Damn man you are terrible. How do you not remember all the good memories we had?";
+		} else if (_score < 18) {
+			scoreText.text = scoreText.text  + '\n' + "This is pretty bad man, you only remember a bit of all the good times.";
+		} else if (_score < 20) {
+			scoreText.text = scoreText.text  + '\n' + "We've known each other for like 2 years and you still can't get 20/20.";
+		} else if (_score == (int) (_numberOfQuestions)) {
+			scoreText.text = scoreText.text  + '\n' + "Please contact Vicky to claim your reward.";
 		}
 	}
 
