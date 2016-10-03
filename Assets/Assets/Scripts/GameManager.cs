@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-	public Question[] questions;
+	private List<Question> questions;
 	private List<Question> unansweredQuestions;
 	public static GameManager instance;
 
@@ -31,6 +31,8 @@ public class GameManager : MonoBehaviour {
 
 	private int score;
 
+	private QuestionList questionList = new QuestionList();
+
 	void Awake() {
 		if (instance != null) {
 			Debug.LogError ("More than one GameManager in scene.");
@@ -46,7 +48,17 @@ public class GameManager : MonoBehaviour {
 		startCanvas.gameObject.SetActive(true);
 	}
 
-	public void StartQuiz() {
+	public void StartQuizOne() {
+		if (questions != null) questions.Clear();
+		questions = questionList.GetQuestionsOne();
+		startCanvas.gameObject.SetActive(false);
+		quizCanvas.gameObject.SetActive(true);
+		Setup();
+	}
+
+	public void StartQuizTwo() {
+		if (questions != null) questions.Clear();
+		questions = questionList.GetQuestionsTwo();
 		startCanvas.gameObject.SetActive(false);
 		quizCanvas.gameObject.SetActive(true);
 		Setup();
@@ -130,7 +142,7 @@ public class GameManager : MonoBehaviour {
 	private void EndOfQuiz() {
 		quizCanvas.gameObject.SetActive(false);
 		endCanvas.gameObject.SetActive(true);
-		EndGame.instance.ShowScore(score, questions.Length);
+		EndGame.instance.ShowScore(score, questions.Count);
 	}
 
 }
